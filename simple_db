@@ -1,0 +1,33 @@
+# 一个简单的数据库
+# 字典使用人名作为键 每个人用另一个字典来表示
+people={
+    'lgh':{
+        'phone':13387212527,
+        'address':"将军山村一组"
+    },
+    'wme':{
+        'phone':13387212528,
+        'address':"将军山村一组01"
+    },
+    'xxx':{
+        'phone':13387212529,
+        'address':"将军山村一组02"
+    }
+}
+
+labels={
+    'phone':'phone number',
+    'address':'address'
+}
+name=input('name: ')
+# 查找电话号码还是地址
+request=input('phone number (p) or address (a) ?')
+# 使用正确的键
+if request=='p':
+    key='phone'
+if request=='a':
+    key='address'
+
+# 如果名字是字典中的有效键才打印信息
+if name in people:
+    print("%s 's %s is %s" % (name,labels[key],people[name][key]))

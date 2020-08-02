@@ -108,13 +108,24 @@ from pprint import pprint
 
 # 字典 {} 空字典
 # 创建和使用字典
-phone_book={'lgh':123,'wme':456,'lr':789}
-# dict 函数
+# phone_book={'lgh':123,'wme':456,'lr':789}
+# # dict 函数
 items=[('name','lgh'),('age',28)]
 d=dict(items)  # 用dict 创建字典
 pprint(d)
+#
+# # dict 函数可以通过关键字来创建字典
+# pprint(dict(name='lgh',age=28))
 
-
+# 基本字典操作
+print(len(d)) # 键值对的数量
+pprint(d['name']) # 通过键查找值
+d["sex"]='男' # 赋值
+pprint(d)
+# del d[k]  删除键为k的项
+del d['sex']
+print(d)
+# k in d  检查d中是否含有k的项
 
 
 
